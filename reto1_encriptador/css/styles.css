@@ -1,0 +1,252 @@
+/* reestablecimiento de algunos estilos  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100%; 
+  background-color: #90CBFF;
+}
+
+/* clase para ocultar un elemento específico */
+.hidden_element{
+  display: none;
+}
+
+.show_element{
+  display: block;
+}
+
+.input_text_invalid{
+   border:2px solid red;
+   outline: red;
+}
+
+/* clase para dar efecto de alerta activada*/
+.alert_activated{
+   color: red;
+}
+
+.alert_desactivated{
+  color: black;
+}
+
+/* clase para dar efecto de alerta desactivada*/
+
+.show_element{
+   display: block;
+}
+
+/* contenedor principal del encriptador */
+.container_main{
+  display: grid;
+  margin: 2% 2% 2% 3%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 1rem; 
+}
+
+/* contenedor del icono */ 
+.container_icon_alura{
+  grid-column: span 3;
+}
+
+/* se da efecto de rotación al icono de alura*/
+.icon_alura:hover{
+  -webkit-transform: rotateY(360deg);
+  transition: 0.5s ease-in-out;
+}
+
+/* contenedor de las acciones para ingresar información */
+.actions_input_info{
+   width: 90%;
+   justify-self: center;
+   grid-column: span 3;
+   grid-row: span 6;
+}
+
+/* textarea para el texto a encriptar */
+.input_text{
+  width: 100%;
+  height: 100%;
+  resize: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+  padding: 2%;
+}
+
+/* efecto de selección de la entrada de texto*/
+.input_text:focus{
+  box-shadow: 0 0 10px #719ECE;
+}
+
+/* contenedor del mensaje de alerta de entrada de texto */
+.container_alert-message{
+  margin: 2% 0;
+}
+
+/* icono de la alerta de escritura en el textarea */
+.alert_icon{
+  display: inline-flex;
+}
+
+/*  label con mensaje de alerta en la escritura*/
+.alert_input_text{
+  margin: 1% 0%;
+}
+
+/* contenedor de los botones para encriptar o desencriptar */
+.container_buttons_input{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* botón de encriptación  y desencriptación con respecto a forma*/
+.btn_encrypt,
+.btn_decrypt,
+.btn_copy{
+  width: 45%;
+  border-radius: 10px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.btn_encrypt{
+  background: #0A3871;
+  background-image: linear-gradient(90deg, rgba(10,56,113,0.577468487394958) 0%, rgba(10,56,113,1) 51%, rgba(10,56,113,0.5746673669467788) 100%);
+  color: white;
+}
+
+.btn_encrypt:hover{
+  background: #0A3871;
+  background: linear-gradient(90deg, rgba(10,56,113,1) 0%, rgba(10,56,113,0.57) 51%, rgba(10,56,113,1) 100%);
+}
+
+.btn_decrypt{
+  background: rgb(113,158,206);
+  background: linear-gradient(90deg, rgba(113,158,206,1) 0%, rgba(113,158,206,0.57) 50%, rgba(113,158,206,1) 100%);
+  color: black;
+}
+
+.btn_decrypt:hover{
+  background: rgb(113,158,206);
+  background: linear-gradient(90deg, rgba(113,158,206,0.57) 0%, rgba(113,158,206,1) 50%, rgba(113,158,206,0.57) 100%);
+  color: white;
+}
+
+.btn_copy{
+   background-color: #0A3871;
+   color: white;
+}
+
+/* contenedor para la salida de información */
+.container_output_info{
+  grid-row: span 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* contenedor de la vista mientras no se ingresa texto a encriptar */
+.no_text_encrypt_info{
+  width: 100%;
+  text-align: center;
+}
+
+.no_text_encrypt_info:hover{
+  -webkit-transform: rotateY(360deg);
+  transition: 2s ease-in-out;
+}
+
+.no_text_encrypt_info img{
+   width: 90%;
+}
+
+.no_text_encrypt_info h2{
+   margin: 5%;
+}
+
+.container_text_decrypt{
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.output_text{
+  width: 95%;
+  margin: 2%;
+  height: 82%;
+  resize: none;
+  padding: 5%;
+  border: none;
+  border-radius: 25px;
+  resize: none;
+}
+
+/* se quita el efecto de borde en el focus */
+.output_text:focus{
+   border: none;
+   outline: none;
+}
+
+.btn_copy{
+  width: 90%;
+  margin: 0% 5%;
+}
+
+
+@media screen and (max-width: 650px){
+  .container_main{
+    display: block;
+    margin: 2% 2% 2% 3%;
+  }
+
+  .actions_input_info{
+    display: block;
+    margin-top: 3%;
+  }
+  
+  .input_text{
+     width: 100%;
+     height: 500px;
+     margin: 5 0%;
+  }
+
+  .container_buttons_input{
+     margin: 2% 0%;
+  }
+
+  .container_output_info{
+     display: block;
+     height: 500px;
+     width: 90%;
+     margin-top: 5%;
+  }
+
+  .btn_copy{
+    margin: 0% 0% 200px 5%;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+   .container_buttons_input{
+     display: block;
+   }
+
+   .btn_encrypt,
+   .btn_decrypt{
+      display: block;
+      width: 100%;
+      margin: 2%;
+   }
+}
