@@ -1,0 +1,68 @@
+<!-- html para el encriptador con html, css y js -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador</title>
+
+  <!-- enlace con los estilos de css -->
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    
+   <!-- Sección principal del body -->
+   <main>
+      <!-- contenedor principal  -->
+      <div class="container_main">
+         
+        <!-- contenedor del icono de alura  -->
+        <div class="container_icon_alura">  
+          <img class="icon_alura" src="src/images/aluraIcon.png" alt="Icono de alura"> 
+        </div>
+        
+        <!-- contenedor de las acciones del usuario en la parte de encriptación -->
+        <div class="actions_input_info">
+          <textarea id="input_text" class="input_text" placeholder="Ingresa el texto aquí"></textarea>
+
+          <!-- Contenedor del mensaje de alerta -->
+          <div class="container_alert-message">
+            <!-- mensaje de alerta de escritura del texto -->
+            <img class="alert_icon" src="src/images/icon_alert.png" alt="icono de alerta"/>  
+            <label id="alert_label" class="alert_input_text"> Solo letras minusculas y sin acentos</label>
+          </div>
+
+          <!--  Contenedor de los botones para activar las acciones  -->
+          <div class="container_buttons_input">
+            <input id="btn_encrypt" class="btn_encrypt" type="button" value="Encriptar">
+            <input id="btn_decrypt" class="btn_decrypt" type="button" value="Desencriptar">
+          </div>
+        </div>
+
+        <!-- Contenedor para la información de salida -->
+        <div class="container_output_info">
+
+          <!-- contenedor de información de no texto ingresado -->
+          <div id="container_no_text" class="no_text_encrypt_info">
+             <img  src="src/images//fig_ouput.png" alt="figura inicial">
+             <h2> Ningún mensaje fue encontrado</h2>
+          </div>
+
+          <!-- Contenedor para el texto desencriptado -->
+          <div id="container_output_text" class="container_text_decrypt hidden_element">
+            <textarea readonly id = "output_text" class="output_text" placeholder="Aquí estará tu mensaje desencriptado"></textarea>
+            <input id="btn_copy" class="btn_copy" type="button" value="Copiar">
+          </div>
+
+        </div>
+
+      </div>  
+   </main>
+
+  <!-- enlace con el archivo de javascript para el encriptador -->
+  <script src="js/index.js"></script>
+
+</body>
+</html>
