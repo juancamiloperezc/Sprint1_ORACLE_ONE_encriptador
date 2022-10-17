@@ -15,3 +15,6 @@
 ## EJEMPLOS: 
 - "gato" => "gaitober"
 -  gaitober" => "gato"
+
+##INTERFAZ GRÁFICA
+![image](https://user-images.githubusercontent.com/87032143/196216053-40174fd4-0329-4e6e-b671-5ae36ccd83d6.png)
